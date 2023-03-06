@@ -44,3 +44,29 @@ def sayMy(name, age, man=True):
         
 sayMy("김주원", 22)
 sayMy("윤박", 30, False)
+
+#12345를 인수로 받아서  [5,4,3,2,1]리턴
+# int("100") ---> 정수로 형변환
+# list() ---> 리스트로 형변환
+# str() ---> 문자로 형변환
+def solution(n):
+    answer = []
+    for i in str(n):
+        answer.append(int(i))
+    answer.reverse()
+    return answer
+print(solution(12345))
+
+def avgNumber(*args):
+    sum = 0
+    for i in args:
+        sum += i
+    avgre = sum / len(args)
+    return avgre
+
+print(avgNumber(1,2,3))
+print(avgNumber(5,6,7,8,9,10))
+
+# 람다함수
+# lambda 매개변수1, 매개변수2 : 매개변수를 사용한 표현식
+lambdaAdd = lambda a,b : a+b
